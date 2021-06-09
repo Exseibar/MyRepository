@@ -18,13 +18,29 @@ public class Pearson {
 		return username;
 	}
 
-	public boolean equals(String user, String pass) {
+	@Override
+	public boolean equals(Object obj) {
+		Pearson temp = (Pearson) obj;
+		return equals(temp.getUser(), temp.getPass());
+	}
+
+	private boolean equals(String user, String pass) {
 
 		if (this.username.equals(user) && this.password.equals(pass)) {
 			return true;
 		}
 
 		return false;
+	}
+
+	private String printObj() {
+		return this.username + " " + this.password;
+
+	}
+
+	public String toString() {
+		return printObj();
+
 	}
 
 }
