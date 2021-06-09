@@ -18,4 +18,13 @@ public class Pearson {
 		return username;
 	}
 
+	public boolean equals(String user, String pass) {
+
+		if (this.username.equals(user) && this.password.equals(pass)) {
+			return true;
+		}
+
+		return false;
+	}
+
 }
