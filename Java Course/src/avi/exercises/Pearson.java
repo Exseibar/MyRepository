@@ -1,4 +1,4 @@
-package learning;
+package avi.exercises;
 
 public class Pearson {
 

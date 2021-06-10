@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"current.lesson","c":"Person","l":"Person()","url":"%3Cinit%3E()"},{"p":"current.lesson","c":"Person","l":"speak()"}]
