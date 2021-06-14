@@ -1,6 +1,6 @@
 package abstracts;
 
-public class Hawk extends Bird implements Flyer {
+public class Hawk extends Bird implements Flyer, Navigator {
 
 	@Override
 	public void speak() {
@@ -10,5 +10,11 @@ public class Hawk extends Bird implements Flyer {
 	@Override
 	public void fly() {
 		System.out.println("flies");
+	}
+
+	@Override
+	public void navigate() {
+		System.out.println("Hawk navigation");
+
 	}
 }
