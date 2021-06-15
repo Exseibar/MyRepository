@@ -29,4 +29,9 @@ public class Bat extends Mammal implements AdvancedFlyer {
 
 	}
 
+	@Override
+	public void glide() {
+		System.out.println("Bat glides");
+	}
+
 }

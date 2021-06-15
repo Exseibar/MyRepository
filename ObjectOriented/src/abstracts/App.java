@@ -18,6 +18,8 @@ public class App {
 		animals[8] = new Bat();
 		animals[9] = new Dog();
 
+		((Flyer) animals[1]).glide();
+
 //		for (Animal animal : animals) {
 //			if (animal != null) {
 //				animal.speak();
@@ -38,11 +40,11 @@ public class App {
 //		for (int i = 0; i < flyer.length; i++) {
 //			System.out.println(flyer[i]);
 //		}
-		for (Animal animal : animals) {
-			if (animal instanceof AdvancedFlyer) {
-				((AdvancedFlyer) animal).land();
-			}
-		}
+//		for (Animal animal : animals) {
+//			if (animal instanceof AdvancedFlyer) {
+//				((AdvancedFlyer) animal).land();
+//			}
+//		}
 
 	}
 }
