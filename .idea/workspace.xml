@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd133726-98d4-4b48-971b-cd6f5354551f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Bank System/src/a/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bank System/src/core/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank System/src/a/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bank System/src/core/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank System/src/a/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bank System/src/core/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank System/src/a/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bank System/src/core/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank System/src/a/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bank System/src/core/Logger.java" afterDir="false" />
-    </list>
+    <list default="true" id="cd133726-98d4-4b48-971b-cd6f5354551f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
