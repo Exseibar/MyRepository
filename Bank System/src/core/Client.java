@@ -66,21 +66,24 @@ public abstract class Client {
 
 	    public void removeAccount(Account acc) {
 	        for(int i = 0; i < accounts.length; i++){
-	            Account account = accounts[i];
+	            Account account = accounts[i];		
 	            if(account != null && account.equals(acc)){	
 	                balance += account.getBalance();
 	                accounts[i] = null;
-	                return;
+	                return;							
 	            }
 	        }
 	    }
 
-	    public void deposit(float balance) {
-	    	this.balance += balance;
+	    public void deposit(float amount) {
+	    	this.balance += amount;
 	    }
 
-	    public void withdraw(float balance) {
-	         this.balance -= balance;
+	    public void withdraw(float amount) { 
+	    	this.balance -= amount;
+	    	float commission = amount * commissionRate;
+	    	Bank.addCommission(commission);
+	    	this.balance -= commission;
 	    }
 
 	    public void autoUpdateAccount() {
