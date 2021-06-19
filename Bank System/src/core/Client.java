@@ -2,16 +2,16 @@ package core;
 
 import java.util.Iterator;
 
-public class Client {
+public abstract class Client {
 	    
+	private final int MAX_SIZE = 5;
 		private int id;
 	    private String name;
 	    private float balance;
 	    private Account[] accounts;
-	    private float commissionRate = 0;
-	    private float interestRate = 0;
+	    protected float commissionRate = 0;
+	    protected float interestRate = 0;
 	    private Logger logger;
-	    private final int MAX_SIZE = 5;
 
 	    public Client(int id, String name, float balance){
 	        this.id = id;
@@ -64,10 +64,10 @@ public class Client {
 	       return null;
 	    }
 
-	    public void removeAccount(int id) {
+	    public void removeAccount(Account acc) {
 	        for(int i = 0; i < accounts.length; i++){
 	            Account account = accounts[i];
-	            if(account != null && account.getId() == id){
+	            if(account != null && account.equals(acc)){	
 	                balance += account.getBalance();
 	                accounts[i] = null;
 	                return;
@@ -97,4 +97,21 @@ public class Client {
 			}
 			return fortune;
 		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj) {
+				return true;
+			}
+			if (obj == null || !(obj instanceof Client)){
+				return false;
+			}
+			Client other = (Client) obj;
+			if (id != other.id) {
+				return false;
+			}
+			return true;
+		}
+		
+
 	}

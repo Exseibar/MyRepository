@@ -25,5 +25,20 @@ public class Account {
 	public String toString() {
 		return "Account [id=" + id + ", balance=" + balance + "]";
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(this == obj) {
+			return true;
+		}
+		if(obj == null || !(obj instanceof Account)) {
+			return false;
+		}
+		Account other = (Account) obj;
+		if(id != other.getId()) {
+			return false;
+		}
+		return true;
+	}
 
 }

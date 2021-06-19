@@ -9,11 +9,11 @@ public class Logger {
 
 	}
 
-	public void log(Log l) {
-		System.out.println(l);
+	public static void log(Log log) {
+		System.out.println(log);
 	}
 
-//	public Log[] getLogs() {
-//		return 0;
-//	}
+	public Log[] getLogs() {
+		return null;
+	}
 }
