@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
@@ -6,4 +7,20 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Bank System/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java Course/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java Curse/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ObjectOriented/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/oop/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+>>>>>>> branch 'master' of https://github.com/Exseibar/MyRepository.git
 </module>

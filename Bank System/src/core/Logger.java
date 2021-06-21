@@ -9,6 +9,7 @@ public class Logger {
 
 	}
 
+<<<<<<< HEAD
 	public void log(Log l) {
 		System.out.println(l);
 	}
@@ -16,4 +17,13 @@ public class Logger {
 //	public Log[] getLogs() {
 //		return 0;
 //	}
+=======
+	public static void log(Log log) {
+		System.out.println(log);
+	}
+
+	public Log[] getLogs() {
+		return null;
+	}
+>>>>>>> branch 'master' of https://github.com/Exseibar/MyRepository.git
 }
