@@ -11,4 +11,8 @@ public class CarDriver extends Thread {
 		this.drivingDistance = drivingDistance;
 	}
 
+	public void run() {
+		car.drive(drivingDistance);
+	}
+
 }
