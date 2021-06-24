@@ -1,4 +1,4 @@
-package stopping.thead;
+package stopping.thread;
 
 public class Demo {
 
