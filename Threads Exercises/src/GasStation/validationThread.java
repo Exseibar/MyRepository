@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class validationThread extends Thread implements Comparator<Person> {
 
 	private Person person;
+	private static int sleepTime = 10000;
 
 	public validationThread() {
 		person = new Person(123, 645, 6445);
@@ -23,7 +24,7 @@ public class validationThread extends Thread implements Comparator<Person> {
 		System.out.println("proccessing...");
 		Person p = new Person(id, carNumber, creditCard);
 		try {
-			sleep(10000);
+			sleep(sleepTime);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
