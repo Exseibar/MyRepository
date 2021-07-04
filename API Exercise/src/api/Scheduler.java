@@ -4,14 +4,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Scheduler extends Thread {
+public class Scheduler {
 
-	List<Task> tasks;
+	private List<Task> tasks;
 	private boolean monitoringActive;
-	private long checkRateMillis;
+	private long checkRateMillis = 5000;
 
 	public Scheduler() {
-
 		tasks = new ArrayList<Task>();
 	}
 
@@ -19,8 +18,12 @@ public class Scheduler extends Thread {
 		this.tasks.add(task);
 	}
 
-	public void removeTask(int index) {
-		this.tasks.remove(index);
+	public void removeTask(int id) throws TaskException {
+		try {
+			this.tasks.remove(id - 1);
+		} catch (IndexOutOfBoundsException e) {
+			throw new TaskException("Task does not exist.");
+		}
 	}
 
 	public void displayTasks() {
@@ -30,8 +33,12 @@ public class Scheduler extends Thread {
 		System.out.println(tasks);
 	}
 
-	public Task getTask(int index) {
-		return tasks.get(index);
+	public Task getTask(int id) throws TaskException {
+		try {
+			return tasks.get(id - 1);
+		} catch (IndexOutOfBoundsException e) {
+			throw new TaskException("Task does not exist.");
+		}
 	}
 
 	public List<Task> getAllTasks() {
@@ -39,23 +46,52 @@ public class Scheduler extends Thread {
 	}
 
 	public List<Task> getAllTasksDueUntil(LocalDateTime deadline) {
-		return null; ///////////////////////////////////////////////
+		List<Task> listDueUntil = new ArrayList<Task>();
+		for (Task task : tasks) {
+			if (task.getDeadline().isBefore(deadline)) {
+				listDueUntil.add(task);
+			}
+		}
+		return listDueUntil;
+
 	}
 
 	public void startMonitoringTasks() {
-		System.out.println("Start monitoring tasks");
+		SchedulerThread schedulerThread = new SchedulerThread();
+		schedulerThread.start();
 		monitoringActive = true;
 	}
 
 	public void stopMonitoringTasks() {
-		System.out.println("stop monitoring tasks");
 		monitoringActive = false;
 	}
 
 	public void checkDeadlines() {
-		LocalDateTime now = LocalDateTime.now();
-		for (int i = 0; i < tasks.size(); i++) {
+		for (Task t : tasks) {
+			if (t.getDeadline().isBefore(LocalDateTime.now()) && !t.isAlertPopped()) {
+				System.out.println("DEADLINE ALERT: " + t);
+				t.setAlertPopped(true);
+			}
+		}
+	}
 
+	public class SchedulerThread extends Thread {
+
+		public SchedulerThread() {
+
+			this.setDaemon(true);
+		}
+
+		@Override
+		public void run() {
+			while (true) {
+				try {
+					sleep(checkRateMillis);
+				} catch (InterruptedException e) {
+					System.out.println("Do not interrupt!");
+				}
+				checkDeadlines();
+			}
 		}
 	}
 

@@ -1,9 +1,8 @@
 package GasStation;
 
-import java.util.Comparator;
 import java.util.Scanner;
 
-public class validationThread extends Thread implements Comparator<Person> {
+public class validationThread extends Thread {
 
 	private Person person;
 	private static int sleepTime = 10000;
@@ -29,28 +28,12 @@ public class validationThread extends Thread implements Comparator<Person> {
 			e.printStackTrace();
 		}
 		sc.close();
-		if (compare(getPerson(), p) == 0) {
+		if (person.getCreditNum() == creditCard) {
 			System.out.println("validation complete!  you can fuel.");
 			return;
 		}
 		System.out.println("credetials incorrect.");
 
-	}
-
-	@Override
-	public int compare(Person o1, Person o2) {
-		if (o1 == o2) {
-			return 0;
-		}
-		if (o1.getCreditNum() == o2.getCreditNum()) {
-			return 0;
-
-		}
-		return -1;
-	}
-
-	public Person getPerson() {
-		return person;
 	}
 
 }

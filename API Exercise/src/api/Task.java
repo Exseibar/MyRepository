@@ -2,7 +2,7 @@ package api;
 
 import java.time.LocalDateTime;
 
-public class Task implements Comparable {
+public class Task implements Comparable<Task> {
 
 	private int id;
 	private String description;
@@ -18,9 +18,7 @@ public class Task implements Comparable {
 	}
 
 	public void doTask() {
-		this.deadline = LocalDateTime.now();
 		this.done = true;
-
 	}
 
 	public int getId() {
@@ -35,11 +33,11 @@ public class Task implements Comparable {
 		return done;
 	}
 
-	public LocalDateTime deadline() {
+	public LocalDateTime getDeadline() {
 		return deadline;
 	}
 
-	public boolean alertPopped() {
+	public boolean isAlertPopped() {
 		return alertPopped;
 	}
 
@@ -65,7 +63,7 @@ public class Task implements Comparable {
 
 	@Override
 	public String toString() {
-		return "Task [id=" + id + ", description=" + description + ", done=" + done + ", deadline=" + deadline
+		return "\nTask [id=" + id + ", description=" + description + ", done=" + done + ", deadline=" + deadline
 				+ ", alertPopped=" + alertPopped + "]";
 	}
 
@@ -93,19 +91,17 @@ public class Task implements Comparable {
 	}
 
 	@Override
-	public int compareTo(Object o) {
-		if (this == o) {
+	public int compareTo(Task other) {
+		if (this == other) {
 			return 0;
 		}
-		if (o instanceof Task) {
-			Task other = (Task) o;
-			if (this.id > other.getId()) {
-				return 1;
-			}
-			if (this.id < other.getId()) {
-				return -1;
-			}
+		if (this.id > other.getId()) {
+			return 1;
 		}
+		if (this.id < other.getId()) {
+			return -1;
+		}
+
 		return 0;
 	}
 
