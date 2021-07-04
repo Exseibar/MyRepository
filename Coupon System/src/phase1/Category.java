@@ -12,7 +12,11 @@ public enum Category {
 
 	ELECTRICITY,
 
-	RESTAURANT,
+	RESTAURANTS,
 
-	VACATION,
+	CAMPING,
+
+	TRAVEL,
+
+	CLOTHING
 }
