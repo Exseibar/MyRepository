@@ -1,4 +1,4 @@
-package phase1;
+package coupon.system.core;
 
 import java.sql.Date;
 

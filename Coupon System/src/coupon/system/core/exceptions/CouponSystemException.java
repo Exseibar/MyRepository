@@ -1,4 +1,4 @@
-package phase1;
+package coupon.system.core.exceptions;
 
 /**
  * This class represents the Exception for the entire program.

@@ -1,4 +1,4 @@
-package phase1;
+package coupon.system.core;
 
 import java.util.ArrayList;
 import java.util.List;

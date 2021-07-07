@@ -1,4 +1,4 @@
-package phase1;
+package coupon.system.core;
 
 /**
  * This class represents the categories for the coupons.
