@@ -1,4 +1,4 @@
-package coupon.system.core;
+package coupon.system.core.beans;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * This class represents the customers.
  * 
- * @author Yossi and Avi Toohband
+ * @author Yossi and Avi Tuchband
  *
  */
 public class Customer {
@@ -20,6 +20,14 @@ public class Customer {
 
 	public Customer() {
 
+	}
+
+	public Customer(int id, String firstName, String lastName, String email, String password) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
 	}
 
 	public int getId() {

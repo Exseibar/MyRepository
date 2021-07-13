@@ -68,10 +68,20 @@ public class Scheduler {
 
 	public void checkDeadlines() {
 		for (Task t : tasks) {
+<<<<<<< HEAD
 			if (t.getDeadline().isBefore(LocalDateTime.now()) && !t.isAlertPopped()) {
 				System.out.println("DEADLINE ALERT: " + t);
 				t.setAlertPopped(true);
 			}
+=======
+			if (t.isAlertPopped()) {
+				continue;
+			}
+			if (t.getDeadline().isBefore(LocalDateTime.now()) && !t.isAlertPopped()) {
+				System.out.println("DEADLINE ALERT: " + t);
+			}
+			t.setAlertPopped(true);
+>>>>>>> branch 'master' of https://github.com/Exseibar/MyRepository.git
 		}
 	}
 

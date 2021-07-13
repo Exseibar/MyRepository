@@ -1,11 +1,11 @@
-package coupon.system.core;
+package coupon.system.core.beans;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  * This class represents the coupons.
  *
- * @author Yossi and Avi Toohband
+ * @author Yossi and Avi Tuchband
  * 
  */
 
@@ -16,8 +16,8 @@ public class Coupon {
 	private Category category;
 	private String title;
 	private String description;
-	private Date startDate;
-	private Date endDate;
+	private LocalDate startDate;
+	private LocalDate endDate;
 	private int amount;
 	private double price;
 	private String image;
@@ -25,6 +25,20 @@ public class Coupon {
 	// CTOR
 	public Coupon() {
 
+	}
+
+	public Coupon(int id, int companyiD, Category category, String title, String description, LocalDate startDate,
+			LocalDate endDate, int amount, double price, String image) {
+		this.id = id;
+		this.companyiD = companyiD;
+		this.category = category;
+		this.title = title;
+		this.description = description;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.amount = amount;
+		this.price = price;
+		this.image = image;
 	}
 
 	public int getId() {
@@ -67,19 +81,19 @@ public class Coupon {
 		this.description = description;
 	}
 
-	public Date getStartDate() {
+	public LocalDate getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(LocalDate startDate) {
 		this.startDate = startDate;
 	}
 
-	public Date getEndDate() {
+	public LocalDate getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(Date endDate) {
+	public void setEndDate(LocalDate endDate) {
 		this.endDate = endDate;
 	}
 

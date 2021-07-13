@@ -1,4 +1,4 @@
-package coupon.system.core;
+package coupon.system.core.beans;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * This class represents the companies.
  * 
- * @author Yossi and Avi Toohband
+ * @author Yossi and Avi Tuchband
  *
  */
 public class Company {
@@ -17,8 +17,33 @@ public class Company {
 	private String password;
 	private List<Coupon> coupons = new ArrayList<Coupon>();
 
+	/**
+	 * constructs a new Company Object with {@code null} in its fields.
+	 */
 	public Company() {
 
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param id       - the number of the object which can be retrieved by the
+	 *                 {@link #getId()} for later use.
+	 * @param name
+	 * @param email
+	 * @param password
+	 */
+	public Company(int id, String name, String email, String password) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+	}
+
+	public Company(String name, String email, String password) {
+		this.name = name;
+		this.email = email;
+		this.password = password;
 	}
 
 	public int getId() {

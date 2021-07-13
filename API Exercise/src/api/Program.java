@@ -94,6 +94,7 @@ public class Program {
 				break;
 
 			case 5:
+<<<<<<< HEAD
 				System.out.println("Enter a hh:mm:ss");
 				String time = sc.nextLine();
 				time = sc.nextLine();
@@ -112,6 +113,11 @@ public class Program {
 				exit = true;
 			}
 
+=======
+				System.out.println("enter a hh:mm:ss");
+
+			}
+>>>>>>> branch 'master' of https://github.com/Exseibar/MyRepository.git
 		}
 
 	}
