@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class represents the companies.
+ * This class represents the company Objects.
  * 
  * @author Yossi and Avi Tuchband
  *
@@ -18,20 +18,23 @@ public class Company {
 	private List<Coupon> coupons = new ArrayList<Coupon>();
 
 	/**
-	 * constructs a new Company Object with {@code null} in its fields.
+	 * Constructs a new Company Object with {@code null} in its fields.
 	 */
 	public Company() {
 
 	}
 
 	/**
+	 * constructs a new Company Object with specified id, name, email and password.
 	 * 
-	 * 
-	 * @param id       - the number of the object which can be retrieved by the
-	 *                 {@link #getId()} for later use.
-	 * @param name
-	 * @param email
-	 * @param password
+	 * @param id       The number of the Company (which can be retrieved by the
+	 *                 {@link #getId()} method).
+	 * @param name     The name of the Company (which can be retrieved by the
+	 *                 {@link #getName()} method).
+	 * @param email    The email of the Company (which can be retrieved by the
+	 *                 {@link #getEmail()} method).
+	 * @param password The password of the Company (which can be retrieved by the
+	 *                 {@link #getPassword()} method).
 	 */
 	public Company(int id, String name, String email, String password) {
 		this.id = id;
@@ -40,57 +43,104 @@ public class Company {
 		this.password = password;
 	}
 
+	/**
+	 * Constructs a new Company Object with specified name, email and password.
+	 * 
+	 * 
+	 * @param name     The name of the Company (which can be retrieved by the
+	 *                 {@link #getName()} method).
+	 * @param email    The email of the Company (which can be retrieved by the
+	 *                 {@link #getEmail()} method).
+	 * @param password The password of the Company (which can be retrieved by the
+	 *                 {@link #getPassword()} method).
+	 */
 	public Company(String name, String email, String password) {
 		this.name = name;
 		this.email = email;
 		this.password = password;
 	}
 
+	/**
+	 * @return the id of the Company Object
+	 */
 	public int getId() {
 		return id;
 	}
 
+	/**
+	 * @param id Sets the id of the Company Object
+	 */
 	public void setId(int id) {
 		this.id = id;
 	}
 
+	/**
+	 * @return the name of the Company Object
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * @param name Sets the name of the Company Object
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * @return the email of the Company Object
+	 */
 	public String getEmail() {
 		return email;
 	}
 
+	/**
+	 * @param email Sets the email of the Company Object
+	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
+	/**
+	 * @return the password of the Company Object
+	 */
 	public String getPassword() {
 		return password;
 	}
 
+	/**
+	 * @param password Sets the password of the Company Object
+	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
+	/**
+	 * @return the Coupon List of the the Company Object
+	 */
 	public List<Coupon> getCoupons() {
 		return coupons;
 	}
 
+	/**
+	 * @param coupons Sets the coupons of the Company of the Company Object
+	 */
 	public void setCoupons(List<Coupon> coupons) {
 		this.coupons = coupons;
 	}
 
+	/**
+	 * @return a String representation of the Company Object
+	 */
 	@Override
 	public String toString() {
 		return "Company [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + "]";
 	}
 
+	/**
+	 * @return a hashCode for the Company Object
+	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -100,6 +150,10 @@ public class Company {
 		return result;
 	}
 
+	/**
+	 * @param obj is the Object which is compared.
+	 * @return if the Company Object is equal to obj Object.
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
