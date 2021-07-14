@@ -1,6 +1,6 @@
 package coupon.system.core.facade;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import coupon.system.core.beans.Category;
 import coupon.system.core.beans.Company;
@@ -34,15 +34,15 @@ public class CompanyFacade extends ClientFacade {
 
 	}
 
-	public ArrayList<Coupon> getCompanyCoupons() {
+	public List<Coupon> getCompanyCoupons() {
 
 	}
 
-	public ArrayList<Coupon> getCompanyCoupons(Category category) {
+	public List<Coupon> getCompanyCoupons(Category category) {
 
 	}
 
-	public ArrayList<Coupon> getCompanyCoupons(double maxPrice) {
+	public List<Coupon> getCompanyCoupons(double maxPrice) {
 
 	}
 

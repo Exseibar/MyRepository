@@ -24,7 +24,7 @@ public class CouponsDAODb implements CouponsDAO {
 		try {
 			con = ConnectionPool.getInstance().getConnection();
 			try (PreparedStatement preSt = con.prepareStatement(sqlCommand, Statement.RETURN_GENERATED_KEYS)) {
-				preSt.setInt(1, coupon.getCompanyiD());
+				preSt.setInt(1, coupon.getCompanyId());
 				preSt.setInt(2, coupon.getCategory().ordinal());
 				preSt.setString(3, coupon.getTitle());
 				preSt.setString(4, coupon.getDescription());
@@ -54,7 +54,7 @@ public class CouponsDAODb implements CouponsDAO {
 		try {
 			con = ConnectionPool.getInstance().getConnection();
 			try (PreparedStatement preSt = con.prepareStatement(sqlCommand)) {
-				preSt.setInt(1, coupon.getCompanyiD());
+				preSt.setInt(1, coupon.getCompanyId());
 				preSt.setInt(2, coupon.getCategory().ordinal());
 				preSt.setString(3, coupon.getTitle());
 				preSt.setString(4, coupon.getDescription());
